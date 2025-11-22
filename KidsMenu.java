@@ -1,5 +1,6 @@
 interface KidsMenu extends  Menu{
     void display();
-    void order(int num);
+    String orderdesc(int n);
     void notifyOrder();
+    float cost(int n);
 }

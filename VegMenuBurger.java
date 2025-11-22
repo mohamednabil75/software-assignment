@@ -1,14 +1,26 @@
 class VegMenuBurger implements VegMenu{
-    private String[] vegBurgers = {"Veggie Burger", "Paneer Burger", "Veggie Masala Burger", "Falafel Burger"} ;
+    private Object[][] vegBurgers = {
+    {"Veggie Burger", 50},
+    {"Paneer Burger", 60},
+    {"Veggie Masala Burger", 55},
+    {"Falafel Burger", 70}
+    };
 
-    public void display(){
-        System.out.println("VegMenuBurger");
+    public void display(){      
+        int count=0;  
+        for(Object[] pizza : vegBurgers) {
+            System.out.println(count+"-"+pizza[0] + " - $" + pizza[1]);
+            count++;
+    }
+
     };
-    public void order(int num){
-        System.out.println("VegMenuItalian:order");
+    public String orderdesc(int n){
+        Object[] description=vegBurgers[n];
+        return description[0].toString();
     };
-    public void notifyOrder(){
-        System.out.println("VegMenuItalian:");
+    public float cost(int n){
+        Object[] description=vegBurgers[n];
+        return ( (Number) description[1]).floatValue();
     };
 
 }

@@ -1,6 +1,6 @@
 public class Kitchen implements Observer {
 private static Kitchen instance;
-private Kitchen(){
+ Kitchen(){
 }
 public static Kitchen getInstance(){
     if(instance==null){

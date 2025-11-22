@@ -1,4 +1,4 @@
 public interface Discount {
     public void applyDiscount();
-    public void calcDiscount();
+    public float calcDiscount(float dis);
 }
