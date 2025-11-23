@@ -9,6 +9,6 @@ public static Kitchen getInstance(){
     return instance;
 }
 public void updateState(String state){
-    System.out.println(state);
+    System.out.println("Kitchen: "+state);
 }
 }
